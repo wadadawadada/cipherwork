@@ -92,9 +92,9 @@ export default function App() {
           <nav className="mnav" aria-label="Main">
             {nav.map(([p, l]) => <button key={p} onClick={() => go(p)} aria-current={page === p ? 'page' : undefined}>{l}</button>)}
           </nav>
-          <span className="header-github" role="img" aria-label="GitHub" title="GitHub">
+          <a className="header-github" href="https://github.com/wadadawadada/cipherwork" target="_blank" rel="noopener noreferrer" aria-label="CIPHERWORK on GitHub" title="Source code on GitHub">
             <svg width="23" height="23" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .75a11.25 11.25 0 0 0-3.558 21.923c.563.104.768-.244.768-.542 0-.267-.01-.975-.015-1.913-3.13.68-3.791-1.508-3.791-1.508-.512-1.3-1.25-1.646-1.25-1.646-1.023-.7.078-.686.078-.686 1.131.08 1.726 1.161 1.726 1.161 1.006 1.724 2.64 1.226 3.283.938.102-.729.394-1.226.716-1.508-2.498-.284-5.124-1.249-5.124-5.562 0-1.229.439-2.234 1.159-3.021-.116-.284-.503-1.43.11-2.98 0 0 .945-.302 3.094 1.154A10.78 10.78 0 0 1 12 6.182c.956.005 1.918.129 2.817.379 2.148-1.456 3.091-1.154 3.091-1.154.615 1.55.228 2.696.112 2.98.722.787 1.157 1.792 1.157 3.021 0 4.325-2.63 5.275-5.136 5.554.404.35.766 1.043.766 2.102 0 1.518-.014 2.743-.014 3.115 0 .3.203.651.774.54A11.25 11.25 0 0 0 12 .75Z" /></svg>
-          </span>
+          </a>
           <button className="btn btn-primary !py-2.5 !px-5 !text-[15px] head-cta" onClick={() => go('console')}>Open console</button>
           <button className="mmenu-btn" aria-label={menu ? 'Close menu' : 'Open menu'} aria-expanded={menu} onClick={() => setMenu(!menu)}>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">{menu ? <path d="M4 4l12 12M16 4L4 16" /> : <path d="M3 6h14M3 14h14" />}</svg>

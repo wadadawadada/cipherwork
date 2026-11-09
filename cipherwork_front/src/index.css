@@ -840,3 +840,5 @@ button.tile:hover { border-color: #5a5a90; background: #12122e; } button.tile:ac
 .wall-switch .ws-thumb::after { top: 5px; bottom: 5px; }
 .wall-switch.is-forged .ws-thumb { transform: translateX(26px); }
 @media (max-width: 760px) { .story-world .wall-switch { margin: 12px auto 0; } }
+
+.header-github { border-radius: 50%; transition: background .15s, color .15s; } .header-github:hover { background: rgba(255,255,255,.08); color: #fff; } .header-github:focus-visible { outline: 2px solid #baabff; outline-offset: 2px; }
