@@ -1,0 +1,45 @@
+{
+  "name": "cipherwork-back",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "build": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "contract:test": "cd contracts/order-escrow && cargo test",
+    "contract:build": "node scripts/build-contract.mjs",
+    "contract:deploy": "tsx scripts/deploy-contract.ts",
+    "keys:generate": "tsx scripts/generate-keys.ts",
+    "smoke:live": "tsx scripts/smoke-live.ts",
+    "demo:failure": "tsx scripts/demo-failure.ts",
+    "cli": "tsx cli/cipherwork.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.4.1",
+    "@fastify/helmet": "^13.2.0",
+    "@fastify/rate-limit": "^11.2.2",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@nearai/inference-sdk": "^0.1.0",
+    "@noble/ed25519": "^3.2.0",
+    "@noble/hashes": "^2.4.0",
+    "dotenv": "^18.0.9",
+    "ethers": "^6.17.0",
+    "fastify": "^5.12.8",
+    "near-api-js": "^7.4.0",
+    "pg": "^8.23.1",
+    "tsx": "^4.23.15",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/pg": "^8.23.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}

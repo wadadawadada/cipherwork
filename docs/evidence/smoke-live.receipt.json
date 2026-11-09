@@ -1,0 +1,63 @@
+{
+  "at": "2026-11-09T10:47:22.439Z",
+  "receipt": {
+    "jobId": "cw_ace6e18a823b5dd77bcbb055",
+    "offerId": "near-ai-glm-5.3-flash",
+    "buyerAccountId": "cipherwork-buyer.testnet",
+    "status": "settled",
+    "amountYoctoNear": "23160000000000000000000",
+    "protocolFeeYoctoNear": "1158000000000000000000",
+    "fundTxHash": "9ALyuF5mTVgALUFwsd3HHU9BMGpKHXcKmLYoMgTpEScA",
+    "settleTxHash": "D5NgwTqkos8uDdhEQ4y2SJueENkmqUmjc9rw4FtMaEGn",
+    "fundTxUrl": "https://testnet.nearblocks.io/txns/9ALyuF5mTVgALUFwsd3HHU9BMGpKHXcKmLYoMgTpEScA",
+    "settleTxUrl": "https://testnet.nearblocks.io/txns/D5NgwTqkos8uDdhEQ4y2SJueENkmqUmjc9rw4FtMaEGn",
+    "proofDigest": "8c93e4e06351c27192d9d5571c680e18f5e89c9ad3208eff5eed961641812d1d",
+    "verdictKeyId": "cw-verifier-1",
+    "outcome": "verified",
+    "failureCode": null,
+    "contractId": "cipherwork-escrow.testnet",
+    "contractUrl": "https://testnet.nearblocks.io/address/cipherwork-escrow.testnet",
+    "trust": "Trust: CIPHERWORK authorized verifier",
+    "createdAtMs": 1794221189193
+  },
+  "checks": [
+    {
+      "id": "binding",
+      "label": "Bundle matches job, offer and model",
+      "status": "passed"
+    },
+    {
+      "id": "attestation",
+      "label": "TDX quote, nonce freshness, signer binding, RTMR3 replay, MRCONFIGID, GPU evidence",
+      "status": "passed",
+      "detail": "1 candidate(s), TCB UpToDate"
+    },
+    {
+      "id": "sigkind",
+      "label": "Signature kind is provider_tee",
+      "status": "passed"
+    },
+    {
+      "id": "signer",
+      "label": "Signature signer matches exactly one verified model report",
+      "status": "passed"
+    },
+    {
+      "id": "signature",
+      "label": "Response signature is cryptographically valid for the attested signer",
+      "status": "passed"
+    },
+    {
+      "id": "payload",
+      "label": "Signed text is <model>:<request_hash>:<response_hash> for the ordered model",
+      "status": "passed"
+    },
+    {
+      "id": "bytes",
+      "label": "Exact request/response bytes hashed into the signature",
+      "status": "not_checked",
+      "detail": "The verifier never receives plaintext, so byte-exact hashing is verified client-side by the SDK. This is a documented weaker check."
+    }
+  ],
+  "signatureKind": "provider_tee"
+}

@@ -1,0 +1,29 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  back:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: cipherwork_back } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - run: npm ci
+      - run: npm run build
+      - run: npm test           # offline security tests (T04, T05, T09, verdict format)
+  contract:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: cipherwork_back/contracts/order-escrow } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo test          # T06, T07, T08 and signer/replay/refund invariants
+  front:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: cipherwork_front } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - run: npm ci
+      - run: npm run build

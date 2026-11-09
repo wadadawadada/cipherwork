@@ -1,0 +1,5 @@
+# Receipt guardian
+
+Generated with the built-in image_gen tool. Saved to `cipherwork_front/public/assets/receipt-guardian.png` with transparency.
+
+Use case: stylized-concept. Asset type: transparent decorative illustration for the white 'What CIPHERWORK is' section of a confidential AI compute website, next to a dark job receipt. A single adorable squishy marshmallow-white jelly agent with two tiny deep-indigo dot eyes and a small smile, hugging a translucent lilac sealed envelope with a chunky deep-violet padlock. A small floating lilac wax seal with a white checkmark beside its head represents a verified result. Premium soft sculpted clay and frosted glass 3D, rounded simple shapes, soft lavender studio shadows, subtle violet edge light, restrained glow so it reads beautifully on pure white. Three-quarter view. One character and these two props only, clean iconic silhouette, no servers, no vault, no coins, no background scene, no floor or platform. Centered full subject with 12 percent clear padding on every side, square composition. Genuinely transparent background. No text, letters, numbers, logos, watermark.

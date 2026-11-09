@@ -1,0 +1,8 @@
+{
+  "_warning": "TEST FIXTURES ONLY. These describe deliberately injected faults used to prove fail-closed behaviour. They are never used in the real flow.",
+  "faults": [
+    { "id": "wrong_nonce", "description": "The verifier is given a nonce different from the one embedded in the quote (replayed report).", "expected": "ATTESTATION_INVALID, zero sensitive bytes sent" },
+    { "id": "tampered_quote", "description": "One byte of the Intel TDX quote is altered.", "expected": "ATTESTATION_INVALID, zero sensitive bytes sent" },
+    { "id": "demo-outage-simulator", "description": "Offer that always reports unavailable.", "expected": "PROVIDER_UNAVAILABLE at quote time" }
+  ]
+}

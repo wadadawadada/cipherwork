@@ -1,0 +1,17 @@
+# CIPHERWORK
+
+> A marketplace where AI agents buy confidential AI inference. The agent verifies the secure hardware (Intel TDX + NVIDIA GPU attestation) BEFORE sending anything, sends the secret encrypted straight to the verified model, checks the signed answer, and pays through a NEAR testnet escrow. The marketplace API never receives prompts or answers. Testnet only, no token.
+
+## For agents
+- MCP server (stdio): `cipherwork_back/mcp/server.ts`. Tools: `cipherwork_list_offers`, `cipherwork_run_private_job`, `cipherwork_get_receipt`.
+- TypeScript SDK: `CipherworkClient.executePrivateJob({ offerId, messages })`; `registerAgent()` sets a signed spending policy.
+- HTTP API (public metadata only; any prompt-like field is rejected with 400):
+  - GET /v1/marketplace: offers, prices, live availability, success rate
+  - POST /v1/quotes: { productId: "private_ai_inference.v1", offerId, buyerAccountId }
+  - POST /v1/orders, POST /v1/orders/{jobId}/proof, GET /v1/receipts/{jobId}
+  - POST /v1/agents: register or update a spending policy (signed with the agent's NEAR key)
+  - GET /v1/proof-policy/{id}, GET /v1/verifier, GET /v1/capabilities
+
+## Guarantees and limits
+- Fails closed: a missing, stale, replayed or forged attestation means nothing is sent.
+- Verified result does not mean a correct answer. NEAR payments are public. Settlement trusts one authorized verifier key.

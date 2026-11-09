@@ -1,0 +1,8 @@
+{
+  "note": "Deterministic checks for the fictional report. Model wording varies; these facts must appear in a correct analysis.",
+  "mustMention": ["592,000", "covenant", "fuel hedge", "41%"],
+  "operatingProfitUsd": 592000,
+  "totalRevenueUsd": 6597000,
+  "totalCostsUsd": 6005000,
+  "cashHeadroomOverCovenantUsd": 340000
+}

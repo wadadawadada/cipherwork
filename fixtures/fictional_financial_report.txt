@@ -1,0 +1,25 @@
+NORTHWIND HARBOR LOGISTICS (FICTIONAL COMPANY, SYNTHETIC DATA)
+Q3 2026 Internal Financial Summary - CONFIDENTIAL DEMO FIXTURE
+
+Revenue
+  Freight services:        4,820,000 USD
+  Warehousing:             1,365,000 USD
+  Customs brokerage:         412,000 USD
+  Total revenue:           6,597,000 USD
+
+Costs
+  Fuel and carrier costs:  3,940,000 USD
+  Payroll:                 1,215,000 USD
+  Facilities and leases:     540,000 USD
+  One-off legal settlement:  310,000 USD  (Harborline v. Northwind, undisclosed)
+  Total costs:             6,005,000 USD
+
+Operating profit:            592,000 USD
+Cash on hand (30 Sep):     2,140,000 USD
+Debt covenant: minimum cash 1,800,000 USD
+
+Notes
+  - Two largest customers (Aster Foods, Vega Retail) are 41% of revenue.
+  - Fuel hedge expires 15 Dec 2026; unhedged exposure is ~1.9M USD for Q1.
+  - Board has NOT yet approved the planned acquisition of Pier Nine Cold Storage (offer: 3.2M USD).
+  - Draft layoff plan for the Rotterdam depot (38 roles) is not public.
